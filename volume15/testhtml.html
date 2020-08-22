@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      body {
+      	Margin: 0!important;
+      	padding: 10px;
+      	background-color: #FFF;
+      }
+      .wrapper {
+      	width: 100%;
+      	table-layout: fixed;
+      }
+      .wrapper-inner {
+      	width: 100%;
+      	background-color: #eee;
+      	max-width: 670px;
+      	Margin: 0 auto;
+      }
+      table {
+      	border-spacing: 0;
+      	font-family: sans-serif;
+      	color: #727f80;
+      }
+      .outer-table {
+      	width: 100%;
+      	max-width: 670px;
+      	margin: 0 auto;
+      	background-color: #FFF;
+      }
+      td {
+          padding: 0;
+      }
+      .header {
+          background-color: #C2C1C1;
+          border-bottom: 3px solid #AB1E24;
+          border-top: 3px solid #AB1E24;
+      }
+      p {
+          Margin:0;
+      }
+      .header p {
+          text-align: center;
+          padding: 1%;
+          font-weight: 500;
+          font-size: 11px;
+          text-transform: uppercase;
+      }
+      a {
+          color: #AB1E24;
+          text-decoration: none;
+      }
+      /*--- End Outer Table 1 --*/
+      .main-table-first {
+      	width: 100%;
+      	max-width: 610px;
+      	Margin: 0 auto;
+      	background-color: #FFF;
+      	border-radius: 6px;
+      	margin-top: 25px;
+      }
+      /*--- Start Two Column Sections --*/
+      .two-column {
+          text-align: center;
+          font-size: 0;
+          padding: 10px 0 10px 0;
+      }
+      .two-column .section {
+          width: 100%;
+          max-width: 300px;
+          display: inline-block;
+          vertical-align: top;
+      }
+      .two-column .content {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: justify;
+      }
+      .content {
+          width: 100%;
+          padding-top: 6px;
+      }
+      .center {
+          display: table;
+          Margin: 0 auto;
+      }
+      img {
+          border: 0;
+      }
+      .tr-with-color {
+        background: #f2e1bb;
+      }
+      /*--- Start Outer Table Banner Image, Text --*/
+      .image img {
+          width: 100%;
+          max-width: 670px;
+          height: auto;
+      }
+      .main-table {
+          width: 100%;
+          max-width: 610px;
+          margin: 0 auto;
+          background-color: #FFF;
+          border-radius: 6px;
+      }
+      .one-column .inner-td {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: justify;
+      }
+      .inner-td {
+          padding: 5px;
+      }
+      .inner-td-info {
+        padding: 2px;
+        line-height: 15px;
+      }
+      .h2 {
+          text-align: center;
+          font-size: 23px;
+          font-weight: 600;
+          line-height: 30px;
+          Margin: 12px;
+          color: #AB1E24;
+      }
+      p.center {
+        text-align: center;
+        max-width: 580px;
+        line-height: 24px;
+      }
+      p.left {
+        text-align: left;
+        max-width: 580px;
+        line-height: 24px;
+      }
+      .small-image {
+        text-align: center;
+      }
+      .small-image img {
+        max-width: 280px;
+        height: auto;
+      }
+      /*--- Start Two Column Image & Text Sections --*/
+      .two-column img {
+          width: 100%;
+          max-width: 280px;
+          height: auto;
+      }
+      .two-column .text {
+          padding: 5px 0;
+      }
+      /*--- Start 3 Column Image & Text Section --*/
+      .outer-table-2 {
+      	width: 100%;
+      	max-width: 670px;
+      	margin: 22px auto;
+      	background-color: #C2C1C1;
+          border-bottom: 3px solid #AB1E24;
+          border-top: 3px solid #AB1E24;
+      }
+      .outer-table-2-info {
+      	width: 100%;
+      	max-width: 670px;
+      	// margin: 22px auto;
+        text-align: center;
+      	background-color: #C2C1C1;
+          border-bottom: 3px solid #AB1E24;
+          border-top: 3px solid #AB1E24;
+      }
+      .three-column {
+          text-align: center;
+          font-size: 0;
+          padding: 10px 0 10px 0;
+      }
+      .three-column .section {
+          width: 100%;
+          max-width: 300px;
+          display: inline-block;
+          vertical-align: top;
+      }
+      .three-column .content {
+          font-size: 16px;
+          line-height: 20px;
+      }
+      .three-column img {
+          width: 100%;
+          max-width: 125px;
+          height: auto;
+      }
+      .three-column-info {
+          text-align: center;
+          font-size: 0;
+          padding: 0;
+      }
+      .three-column-info .section {
+          width: 100%;
+          max-width: 200px;
+          display: inline-block;
+          vertical-align: top;
+      }
+      .three-column-info .content {
+          font-size: 16px;
+          line-height: 18px;
+          padding: 0;
+      }
+      .td-border {
+        border-top: 1px dotted #FFFFFF;
+        font-weight: bold;
+      }
+      p.bold {
+        font-weight: bold;
+      }
+      .outer-table-2 p {
+      	margin-top: 6px;
+      	color: #FFF;
+      	font-size: 18px;
+      	font-weight: 500;
+      	line-height: 23px;
+      }
+      /*--- Start Two Column Article Section --*/
+      .outer-table-3 {
+          width: 100%;
+          max-width: 670px;
+          margin: 22px auto;
+          background-color: #C2C1C1;
+          border-top: 3px solid #AB1E24;
+      }
+      .h3 {
+      	text-align: center;
+      	font-size: 21px;
+      	font-weight: 600;
+      	Margin-bottom: 6px;
+      	color: #AB1E24;
+      }
+      /*--- Start Bottom One Column Section --*/
+      .inner-bottom {
+      	padding: 22px;
+      }
+      .h1 {
+          text-align: center!important;
+          font-size: 25px!important;
+          font-weight: 600;
+          line-height: 45px;
+          Margin: 12px 0 20px 0;
+          color: #AB1E24;
+      }
+
+      /*--- Start Footer Section --*/
+      .footer {
+      	width: 100%;
+      	background-color: #C2C1C1;
+      	Margin: 0 auto;
+          color: #FFF;
+      }
+      .h3-footer {
+        font-size: 16px;
+        text-align: center;
+        color: #FFF!important;
+        padding: 5px;
+      }
+      p.footer {
+      	text-align: center;
+      	color: #FFF!important;
+      	// line-height: 30px;
+        line-height: 20px;
+      	padding-bottom: 2%;
+      }
+      .three-column .h3 {
+        color: #AB1E24;
+        font-size: 20px;
+      }
+      .img-btn {
+        border: 3px solid #AB1E24;
+        max-height: 75px;
+      }
+      .calendar {
+        border: 3px #CDA44A solid;
+        text-align: left;
+      }
+      .calendar td {
+        padding: 5px;
+        vertical-align: bottom;
+      }
+      .calendar tr:nth-child(even){
+        background-color: #f2e1bb;
+      }
+      .calendar th {
+        padding-top: 4px;
+      }
+      /*--- Media Queries --*/
+      @media screen and (max-width: 400px) {
+      	.h1 {
+      		font-size: 22px;
+      	}
+      	.two-column .column, .three-column .column {
+      		max-width: 100%!important;
+      	}
+      	.two-column img {
+      		width: 100%!important;
+      	}
+      	.three-column img {
+      		max-width: 60%!important;
+      	}
+      }
+      @media screen and (min-width: 401px) and (max-width: 400px) {
+
+      	.two-column .column {
+      		max-width: 50%!important;
+      	}
+      	.three-column .column {
+      		max-width: 33%!important;
+      }
+      }
+      @media screen and (max-width:768px) {
+      img.logo {
+      	float:none !important;
+      	margin-left:0% !important;
+      	max-width: 200px!important;
+      }
+      .two-column .section {
+      	width: 100% !important;
+      	max-width: 300px;
+      	display: inline-block;
+      	vertical-align: top;
+      }
+
+      .two-column img {
+      	width: 100% !important;
+       	height: auto !important;
+      }
+      img.img-responsive {
+          width:100% !important;
+          height:auto !important;
+          max-width:100% !important;
+      }
+      .content {
+      	width: 100%;
+      	padding-top:0px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="wrapper">
+    	<table class="wrapper-inner">
+
+        <tr class="outer-table">
+          <td class="header">
+            <p><a href="https://communityhousepto.weebly.com/august-25-2019.html">Click to view this email in your browser</a></p>
+          </td>
+        </tr>
+
+        <tr class="outer-table">
+          <td class="image">
+            <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/banner_orig.jpg" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table class="outer-table-2-info">
+              <tr>
+                <td class="text">
+                  <p>August 25, 2019</p>
+                </td>
+
+                <td class="text">
+                  <p>Vol. 15, Issue 2</p>
+                </td>
+
+                <td class="text">
+                  <p><a href="https://communityhousemiddleschool.wearecms.com">CHMS Website</a></p>
+                </td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
+        </tr>
+
+
+      </table> <!--- End Wrapper-Inner -->
+    </table>  <!--- End Wrapper-Outer -->
+  </body>
+<html>

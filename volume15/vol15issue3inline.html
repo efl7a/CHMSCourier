@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      body {
+      	Margin: 0!important;
+      	padding: 10px;
+      	background-color: #FFF;
+      }
+      .wrapper {
+      	width: 100%;
+      	table-layout: fixed;
+      }
+      .wrapper-inner {
+      	width: 100%;
+      	background-color: #eee;
+      	max-width: 670px;
+      	Margin: 0 auto;
+      }
+      table {
+      	border-spacing: 0;
+      	font-family: sans-serif;
+      	color: #727f80;
+      }
+      .outer-table {
+      	width: 100%;
+      	max-width: 670px;
+      	margin: 0 auto;
+      	background-color: #FFF;
+      }
+      td {
+          padding: 0;
+      }
+      .header {
+          background-color: #C2C1C1;
+          border-bottom: 3px solid #AB1E24;
+      }
+      p {
+          Margin:0;
+      }
+      .header p {
+          text-align: center;
+          padding: 1%;
+          font-weight: 500;
+          font-size: 11px;
+          text-transform: uppercase;
+      }
+      a {
+          color: #AB1E24;
+          text-decoration: none;
+      }
+      /*--- End Outer Table 1 --*/
+      .main-table-first {
+      	width: 100%;
+      	max-width: 610px;
+      	Margin: 0 auto;
+      	background-color: #FFF;
+      	border-radius: 6px;
+      	margin-top: 25px;
+      }
+      /*--- Start Two Column Sections --*/
+      .two-column {
+          text-align: center;
+          font-size: 0;
+          padding: 10px 0 10px 0;
+      }
+      .two-column .section {
+          width: 100%;
+          max-width: 300px;
+          display: inline-block;
+          vertical-align: top;
+      }
+      .two-column .content {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: justify;
+      }
+      .content {
+          width: 100%;
+          padding-top: 6px;
+      }
+      .center {
+          display: table;
+          Margin: 0 auto;
+      }
+      img {
+          border: 0;
+      }
+      .tr-with-color {
+        background: #f2e1bb;
+      }
+      /*--- Start Outer Table Banner Image, Text --*/
+      .image img {
+          width: 100%;
+          max-width: 670px;
+          height: auto;
+      }
+      .main-table {
+          width: 100%;
+          max-width: 610px;
+          margin: 0 auto;
+          background-color: #FFF;
+          border-radius: 6px;
+      }
+      .one-column .inner-td {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: justify;
+      }
+      .inner-td {
+          padding: 5px;
+      }
+      .inner-td-info {
+        padding: 2px;
+        line-height: 15px;
+      }
+      .h2 {
+          text-align: center;
+          font-size: 23px;
+          font-weight: 600;
+          line-height: 30px;
+          Margin: 12px;
+          color: #AB1E24;
+      }
+      p.center {
+        text-align: center;
+        max-width: 580px;
+        line-height: 24px;
+      }
+      p.left {
+        text-align: left;
+        max-width: 580px;
+        line-height: 24px;
+      }
+      .small-image {
+        text-align: center;
+      }
+      .small-image img {
+        max-width: 280px;
+        height: auto;
+      }
+      /*--- Start Two Column Image & Text Sections --*/
+      .two-column img {
+          width: 100%;
+          max-width: 280px;
+          height: auto;
+      }
+      .two-column .text {
+          padding: 5px 0;
+      }
+      /*--- Start 3 Column Image & Text Section --*/
+      .outer-table-2 {
+      	width: 100%;
+      	max-width: 670px;
+      	margin: 22px auto;
+      	background-color: #C2C1C1;
+          border-bottom: 3px solid #AB1E24;
+          border-top: 3px solid #AB1E24;
+      }
+      .outer-table-2-info {
+      	width: 100%;
+      	max-width: 670px;
+      	// margin: 22px auto;
+      	background-color: #C2C1C1;
+          border-bottom: 3px solid #AB1E24;
+          border-top: 3px solid #AB1E24;
+      }
+      .three-column {
+          text-align: center;
+          font-size: 0;
+          padding: 10px 0 10px 0;
+      }
+      .three-column .section {
+          width: 100%;
+          max-width: 300px;
+          display: inline-block;
+          vertical-align: top;
+      }
+      .three-column .content {
+          font-size: 16px;
+          line-height: 20px;
+      }
+      .three-column img {
+          width: 100%;
+          max-width: 125px;
+          height: auto;
+      }
+      .three-column-info {
+          text-align: center;
+          font-size: 0;
+          padding: 0;
+      }
+      .three-column-info .section {
+          width: 100%;
+          max-width: 200px;
+          display: inline-block;
+          vertical-align: top;
+      }
+      .three-column-info .content {
+          font-size: 16px;
+          line-height: 18px;
+          padding: 0;
+      }
+      .td-border {
+        border-top: 1px dotted #FFFFFF;
+        font-weight: bold;
+      }
+      p.bold {
+        font-weight: bold;
+      }
+      .outer-table-2 p {
+      	margin-top: 6px;
+      	color: #FFF;
+      	font-size: 18px;
+      	font-weight: 500;
+      	line-height: 23px;
+      }
+      /*--- Start Two Column Article Section --*/
+      .outer-table-3 {
+          width: 100%;
+          max-width: 670px;
+          margin: 22px auto;
+          background-color: #C2C1C1;
+          border-top: 3px solid #AB1E24;
+      }
+      .h3 {
+      	text-align: center;
+      	font-size: 21px;
+      	font-weight: 600;
+      	Margin-bottom: 6px;
+      	color: #AB1E24;
+      }
+      /*--- Start Bottom One Column Section --*/
+      .inner-bottom {
+      	padding: 22px;
+      }
+      .h1 {
+          text-align: center!important;
+          font-size: 25px!important;
+          font-weight: 600;
+          line-height: 45px;
+          Margin: 12px 0 20px 0;
+          color: #AB1E24;
+      }
+
+      /*--- Start Footer Section --*/
+      .footer {
+      	width: 100%;
+      	background-color: #C2C1C1;
+      	Margin: 0 auto;
+          color: #FFF;
+      }
+      .h3-footer {
+        font-size: 16px;
+        text-align: center;
+        color: #FFF!important;
+        padding: 5px;
+      }
+      p.footer {
+      	text-align: center;
+      	color: #FFF!important;
+      	// line-height: 30px;
+        line-height: 20px;
+      	padding-bottom: 2%;
+      }
+      .three-column .h3 {
+        color: #AB1E24;
+        font-size: 20px;
+      }
+      .img-btn {
+        border: 3px solid #AB1E24;
+        max-height: 75px;
+      }
+      .calendar {
+        border: 3px #CDA44A solid;
+        text-align: left;
+      }
+      .calendar td {
+        padding: 5px;
+        vertical-align: center;
+      }
+      .calendar tr:nth-child(even){
+        background-color: #f2e1bb;
+      }
+      .calendar th {
+        padding-top: 4px;
+      }
+      .round-button {
+        max-width: 50px;
+        padding: 3px;
+      }
+      .round-button-row {
+        vertical-align: center;
+        padding: 2px;
+      }
+      /*--- Media Queries --*/
+      @media screen and (max-width: 400px) {
+      	.h1 {
+      		font-size: 22px;
+      	}
+      	.two-column .column, .three-column .column {
+      		max-width: 100%!important;
+      	}
+      	.two-column img {
+      		width: 100%!important;
+      	}
+      	.three-column img {
+      		max-width: 60%!important;
+      	}
+      }
+      @media screen and (min-width: 401px) and (max-width: 400px) {
+
+      	.two-column .column {
+      		max-width: 50%!important;
+      	}
+      	.three-column .column {
+      		max-width: 33%!important;
+        }
+      }
+      @media screen and (max-width:768px) {
+      img.logo {
+      	float:none !important;
+      	margin-left:0% !important;
+      	max-width: 200px!important;
+      }
+      .two-column .section {
+      	width: 100% !important;
+      	max-width: 300px;
+      	display: inline-block;
+      	vertical-align: top;
+      }
+
+      .two-column img {
+      	width: 100% !important;
+       	height: auto !important;
+      }
+      img.img-responsive {
+          width:100% !important;
+          height:auto !important;
+          max-width:100% !important;
+      }
+      .content {
+      	width: 100%;
+      	padding-top:0px !important;
+      }
+    </style>
+  </head>
+  <body style="padding: 10px;background-color: #FFF;margin: 0!important;">
+    <div class="wrapper" style="width: 100%;table-layout: fixed;">
+    	<div class="wrapper-inner" style="width: 100%;background-color: #eee;max-width: 670px;margin: 0 auto;">
+        <table class="outer-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 0 auto;background-color: #FFF;">
+    			<tr>
+    				<td class="header" style="padding: 0;background-color: #C2C1C1;border-bottom: 3px solid #AB1E24;">
+    					<p style="margin: 0;text-align: center;padding: 1%;font-weight: 500;font-size: 11px;text-transform: uppercase;"><a target="_blank" href="https://communityhousepto.weebly.com/september-1-2019.html" style="color: #AB1E24;text-decoration: none;">Click to view this email in your browser</a></p>
+    				</td>
+          </tr>
+        </table> <!--- End Outer Table -->
+        <table class="outer-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 0 auto;background-color: #FFF;">
+    			<tr>
+    				<td class="image" style="padding: 0;">
+    					<img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/banner_orig.jpg" style="border: 0;width: 100%;max-width: 670px;height: auto;">
+    				</td>
+          </tr>
+        </table> <!--- End Banner Image -->
+        <table class="outer-table-2-info" style="background-color: #C2C1C1;border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;// margin: 22px auto;border-bottom: 3px solid #AB1E24;border-top: 3px solid #AB1E24;">
+    			<tr>
+    				<td class="three-column-info" style="padding: 0;text-align: center;font-size: 0;">
+    					<div class="section" style="width: 100%;max-width: 200px;display: inline-block;vertical-align: top;">
+    						<table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+    							<tr>
+    								<td class="inner-td-info" style="padding: 2px;line-height: 15px;">
+    									<table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 18px;padding: 0;padding-top: 0px !important;">
+    										<tr>
+    											<td class="text" style="padding: 0;">
+    												<p style="margin: 0;">September 1, 2019</p>
+    											</td>
+    										</tr>
+    									</table>
+    								</td>
+    							</tr>
+    						</table>
+    					</div> <!--- End First Column of Three Columns -->
+    					<div class="section" style="width: 100%;max-width: 200px;display: inline-block;vertical-align: top;">
+    						<table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+    							<tr>
+    								<td class="inner-td-info" style="padding: 2px;line-height: 15px;">
+    									<table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 18px;padding: 0;padding-top: 0px !important;">
+    										<tr>
+    											<td class="text" style="padding: 0;">
+    												<p style="margin: 0;">Vol. 15, Issue 3</p>
+    											</td>
+    										</tr>
+    									</table>
+    								</td>
+    							</tr>
+    						</table>
+    					</div> <!--- End Second Column of Three Columns -->
+    					<div class="section" style="width: 100%;max-width: 200px;display: inline-block;vertical-align: top;">
+    						<table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+    							<tr>
+    								<td class="inner-td-info" style="padding: 2px;line-height: 15px;">
+    									<table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 18px;padding: 0;padding-top: 0px !important;">
+    										<tr>
+    											<td class="text" style="padding: 0;">
+    												<p style="margin: 0;"><a target="_blank" href="https://communityhousemiddleschool.wearecms.com" style="color: #AB1E24;text-decoration: none;">CHMS Website</a></p>
+    											</td>
+    										</tr>
+    									</table>
+    								</td>
+    							</tr>
+    						</table>
+    					</div> <!--- End Third Column of Three Columns -->
+    				</td>
+    			</tr> <!--- End Three Column Section -->
+        </table> <!--- End Outer Table 2 -->
+        <table class="main-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 610px;margin: 0 auto;background-color: #FFF;border-radius: 6px;">
+          <tr>
+            <td class="one-column" style="padding: 0;">
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 5px;font-size: 16px;line-height: 20px;text-align: justify;">
+                    <p class="h2" style="margin: 12px;text-align: center;font-size: 23px;font-weight: 600;line-height: 30px;color: #AB1E24;">A Message from the Principal</p>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">
+                      Dear families,
+                    </p>
+                    <br>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">
+                      The first week of school is now under our belts and, aside from computer outages and broken water pipes, it has been a great success!!  We apologize for the late buses but this is always expected during the first week or two as the district adjusts routes to meet the needs of unexpected ridership.  Thank you for your patience!
+                    </p>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">
+                      As of right now our numbers are down a bit from what was originally enrolled.  We seem to be around 1920 as opposed to 1980.  We will continue to assess our No-Shows to see if there is any availability in elective courses where some of you have made requests.  Often times some kids show up the day after Labor Day so we do plan to wait until next week to make changes.
+                    </p>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">
+                      Monday is a school holiday for everyone.  Don't forget that our 6th grade dance is Friday, September 6th from 4:15pm - 6:00pm.  Your child should bring home information about this event so ask if you have not seen it.  Also, mark September 12th on your calendars if you are interested in our Navigating Middle School Social Media event.  This will begin at 6pm in the school cafeteria and it is for parents only.
+                    </p>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">
+                      All 7th grade students must have their current immunization records submitted by the 30th day of school in order to remain enrolled.  If you are not certain if we have yours, please email our nurse at <a href="mailto:stefani1.abbate@cms.k12.nc.us" style="color: #AB1E24;text-decoration: none;">stefani1.abbate@cms.k12.nc.us</a>.
+                    </p>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">
+                      Finally, if your 7th or 8th grader is planning to try out for a fall sport, please make sure you have checked the <a target="_blank" href="https://www.cmsathleticzone.com/page/show/814979-community-house-middle-school" style="color: #AB1E24;text-decoration: none;">
+                        athletics webpage
+                      </a> and submitted ALL documents electronically along with your current physical...all of this is required in order to participate in tryouts.
+                    </p>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">
+                      Enjoy your holiday and we will see everyone on Tuesday!!
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr> <!--- End Heading, Paragraph Section(message) -->
+        </table>
+        <table class="outer-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 0 auto;background-color: #FFF;">
+          <tr>
+            <td class="image" style="padding: 0;">
+              <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/social-media_orig.png" style="border: 0;width: 100%;max-width: 670px;height: auto;">
+            </td>
+          </tr>
+        </table> <!--- End Banner Image -->
+        <table class="main-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 610px;margin: 0 auto;background-color: #FFF;border-radius: 6px;">
+          <tr>
+            <td class="two-column" style="padding: 10px 0 10px 0;text-align: center;font-size: 0;">
+                <div class="section" style="max-width: 300px;display: inline-block;vertical-align: top;width: 100% !important;">
+                    <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                        <tr>
+                            <td class="inner-td" style="padding: 5px;">
+                                <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 20px;text-align: justify;padding-top: 0px !important;">
+                                    <tr>
+                                        <td style="padding: 0;">
+                                          <table class="calendar" style="border-spacing: 0;font-family: sans-serif;color: #727f80;border: 3px #CDA44A solid;text-align: left;">
+                                            <tr>
+                                              <td style="padding: 5px;vertical-align: center;">
+
+                                              </td>
+                                              <th style="padding-top: 4px;">
+                                                <p class="h3" style="margin: 0;text-align: center;font-size: 21px;font-weight: 600;margin-bottom: 6px;color: #AB1E24;">September</p>
+                                              </th>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">2</p>
+                                              </td>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">Labor Day - No School</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">4</p>
+                                              </td>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">LEGO Robotics Interest Meeting 6:00PM</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">6</p>
+                                              </td>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">6th Grade Welcome Dance</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">12</p>
+                                              </td>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">Future Problem Solving-Interest Meeting 5:00PM</p>
+                                                <br>
+                                                <p style="margin: 0;">Principal Chat 6:00PM</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">13</p>
+                                              </td>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">Principal Chat/PTO Meeting 9:30AM</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">17</p>
+                                              </td>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">6th Grade Curriculum Night 6:00PM</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">19</p>
+                                              </td>
+                                              <td style="padding: 5px;vertical-align: center;">
+                                                <p style="margin: 0;">7th/8th Grade Curriculum Night 6:00PM</p>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                          <td class="inner-td" style="padding: 5px;">
+                            <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 20px;text-align: justify;padding-top: 0px !important;">
+
+                              <tr>
+                                <td class="text" style="padding: 5px 0;">
+                                  <p class="h3" style="margin: 0;text-align: center;font-size: 21px;font-weight: 600;margin-bottom: 6px;color: #AB1E24;">Required Fees</p>
+                                </td>
+                              </tr>
+                              <tr class="tr-with-color" style="background: #f2e1bb;">
+                                <td class="text" style="padding: 5px 0;">
+                                  <p class="center bold" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;font-weight: bold;">
+                                    If you paid for Required Fees on P4SS, agendas will be delivered to your student beginning September 4, 2019.
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text" style="padding: 5px 0;">
+                                  <p class="center bold" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;font-weight: bold;">
+                                    Students can pay Required Fees and purchase Springboard books in the lobby September 4-6.
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text" style="padding: 5px 0;">
+                                  <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;">
+                                    Parents can still pay for Required Fees, buy Spirit Wear, and join the CHMS PTO at <a target="_blank" href="https://www.pay4schoolstuff.com/" style="color: #AB1E24;text-decoration: none;">pay4schoolstuff.com</a>.
+                                  </p>
+                                  <br>
+                                  <p class="center bold" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;font-weight: bold;">
+                                    Deadline for Required Fees: September 6, 2019
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                    </table>
+                </div> <!--- End First Column of Two Columns calender -->
+                <div class="section" style="max-width: 300px;display: inline-block;vertical-align: top;width: 100% !important;">
+                  <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                      <tr>
+                          <td class="inner-td" style="padding: 5px;">
+                              <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 20px;text-align: justify;padding-top: 0px !important;">
+                                <tr>
+                                  <td class="text" style="padding: 5px 0;">
+                                    <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/lego_orig.jpg" style="border: 0;max-width: 280px;width: 100% !important;height: auto !important;">
+                                    <p class="h3" style="margin: 0;text-align: center;font-size: 21px;font-weight: 600;margin-bottom: 6px;color: #AB1E24;">CHMS Lego Robotics Club</p>
+                                    <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;">
+                                      Are you interested in LEGO Robotics? Learn more about the CHMS FIRST LEGO league robotics teams at the information session on Wednesday, September 4 at 6:00PM in the CHMS Media Center.
+                                    </p>
+                                    <br>
+                                    <p class="center bold" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;font-weight: bold;">
+                                      Coaches Needed:
+                                    </p>
+                                    <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;">
+                                      Parent coaches are required to field the CHMS teams. Detailed toolkit, tutorials and support is provided by US FLL. Experienced coaches are available to provide support. Kids do the work. If you've coached Odyssey of the Mind, a sports team, or led a Scout troup, you can do this!
+                                    </p>
+                                  </td>
+                                </tr>
+                                <tr class="tr-with-color" style="background: #f2e1bb;">
+                                  <td class="text" style="padding: 5px 0;">
+                                    <p class="h3" style="margin: 0;text-align: center;font-size: 21px;font-weight: 600;margin-bottom: 6px;color: #AB1E24;">6th Grade Required Reading</p>
+                                    <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;">
+                                      The first required reading for 6th grade is Rick Riordan's <i>The Lightning Thief </i> (ISBN: 978-078683865-3).
+                                    </p>
+                                    <br>
+                                    <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;">
+                                      The PTO sells required reading as a fundraiser.  All required reading can be bought on <a target="_blank" href="https://www.pay4schoolstuff.com/" style="color: #AB1E24;text-decoration: none;">pay4schoolstuff.com</a> or in the school lobby.
+                                    </p>
+                                    <br>
+                                    <p class="center bold" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;font-weight: bold;">
+                                      Lobby sales for <i style="padding: 1px">The Lightning Thief</i>  are from August 28 - September 4 for $8.
+                                    </p>
+                                  </td>
+                                </tr>
+                              </table>
+                          </td>
+                      </tr>
+                    </table>
+                  </div>  <!-- End Second of Two Columns links-->
+                </td>
+              </tr>  <!-- End Two Column Section -->
+              <tr>
+                <td class="one-column" style="padding: 0;">
+                  <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                    <tr class="small-image" style="text-align: center;">
+                      <td style="padding: 0;">
+                        <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/6th-grade-dance_orig.png" style="border: 0;max-width: 280px;height: auto;">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="inner-td" style="padding: 5px;font-size: 16px;line-height: 20px;text-align: justify;">
+                        <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;">CHMS will be hosting a welcome dance and social for our 6th
+                          grade students on September 6 from 4:15 to 6:00 PM in the CHMS
+                          cafeteria. A fee of $2 for the dance will be collected in students’
+                          homerooms beginning on August 30. An ice cream truck will
+                          be at the dance selling ice cream for $3. So, send your child
+                          with a few extra dollars, if desired. Please have all rides here on
+                          time at 6:00 PM for pickup.
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 0;">
+                        <p class="center bold" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 24px;font-weight: bold;">
+                          All proceeds from the dance will be used to support our partner school, Albemarle
+                          Road Middle School.
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr> <!--- End Heading, Paragraph Section(message) -->
+        </table> <!--- End Main Table (message) -->
+        <table class="outer-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 0 auto;background-color: #FFF;">
+          <tr>
+            <td class="image" style="padding: 0;">
+              <a href="https://www.signupgenius.com/go/10c0a4ea8aa2aa7f94-20192020" style="color: #AB1E24;text-decoration: none;">
+                <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/school-store-1_orig.png" style="border: 0;width: 100%;max-width: 670px;height: auto;">
+              </a>
+            </td>
+          </tr>
+        </table>
+        <table class="outer-table-2" style="background-color #c2c1c1: ;border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 22px auto;background-color: #C2C1C1;border-bottom: 3px solid #AB1E24;border-top: 3px solid #AB1E24;">
+          <tr>
+            <td class="three-column" style="padding: 10px 0 10px 0;text-align: center;font-size: 0;">
+              <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;">
+                <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                  <tr>
+                    <td class="inner-td" style="padding: 5px;">
+                      <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 20px;padding-top: 0px !important;">
+                        <tr>
+                          <td style="padding: 0;">
+                            <a href="https://www.boxtops4education.com/" style="color: #AB1E24;text-decoration: none;"><img src="https://www.boxtops4education.com/-/media/GMI/boxtopsforyoureducation/Logo/logo.ashx?h=2065&la=en&w=2261&hash=116DA3DCECA789D471588DFC097B2482" style="border: 0;width: 100%;height: auto;max-width: 60%!important;"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text" style="padding: 0;">
+                            <p class="h3" style="margin: 0;text-align: center;font-size: 20px;font-weight: 500;margin-bottom: 6px;color: #AB1E24;margin-top: 6px;line-height: 23px;">Support CHMS</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text" style="padding: 0;">
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">
+                              The Box Tops rebate program has gone digital! No more BoxTop Clipping is needed- just download the BoxTop App on your phone, scan the receipt and earn money for CHMS. See how at www.btfe.com. If you still have unexpired clipped box tops, please send them in with your student to the PTO room.
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0;">
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">
+                              <a href="https://apps.apple.com/app/apple-store/id1150038564" target="_blank" aria-label="IOSLink" style="color: #AB1E24;text-decoration: none;"><img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/appstore-256x256_orig.png" alt="Download from the App Store." style="border: 0;width: 100%;height: auto;max-width: 60%!important;"></a>
+                              <a href="https://play.google.com/store/apps/details?id=com.generalmills.btfe" style="color: #AB1E24;text-decoration: none;"><img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/googleplay-256x256_orig.png" alt="Download from Google Play." style="border: 0;width: 100%;height: auto;max-width: 60%!important;"></a>
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div> <!--- End First Column of three - Stay Connected --->
+
+              <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;">
+                <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                  <tr>
+                    <td class="inner-td" style="padding: 5px;">
+                      <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 20px;padding-top: 0px !important;">
+
+                        <tr>
+                          <td class="text" style="padding: 0;">
+                            <p class="h3" style="margin: 0;text-align: center;font-size: 20px;font-weight: 500;margin-bottom: 6px;color: #AB1E24;margin-top: 6px;line-height: 23px;">
+                              Fishing for Compliments
+                            </p>
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">
+                              CHMS is full of dedicated faculty and staff going the extra mile each day to help our students.  The Fishing for Compliments Program allows them to get a little extra <i>Thank You</i> for their hard work.  Each week Ms. Brooks selects one or two of the nominated employees to receive a $25 gift card.
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0;">
+                            <br>
+                            <a target="_blank" href="https://www.pay4schoolstuff.com/" style="color: #AB1E24;text-decoration: none;">
+                              <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/compliments_orig.jpeg" style="border: 0;width: 100%;height: auto;max-width: 60%!important;">
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0;">
+                            <p class="center bold" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 23px;font-weight: 500;margin-top: 6px;color: #FFF;font-size: 18px;">
+                              Two ways to get involved:
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text" style="padding: 0;">
+                            <p class="center bold" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 23px;font-weight: 500;margin-top: 6px;color: #FFF;font-size: 18px;">
+                              <a href="mailto:jamie.brooks@cms.k12.nc.us" style="color: #AB1E24;text-decoration: none;">
+                                Nominate a CHMS Employee
+                              </a>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text" style="padding: 0;">
+                            <p class="center bold" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 23px;font-weight: 500;margin-top: 6px;color: #FFF;font-size: 18px;">
+                              <a target="_blank" href="https://www.pay4schoolstuff.com/" style="color: #AB1E24;text-decoration: none;">
+                                Donate to the program at pay4schoolstuff.com
+                              </a>
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div><!--- End Third Column of three - Spirit Wear --->
+            </td> <!--- End of three column section --->
+          </tr>
+        </table> <!--- End Outer Table Two (Connect/ Pay4schoolstuff/Spirit wear) -->
+        <table class="outer-table-2" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 22px auto;background-color: #C2C1C1;border-bottom: 3px solid #AB1E24;border-top: 3px solid #AB1E24;">
+          <tr class="round-button-row" style="vertical-align: center;padding: 2px;">
+            <td style="padding: 0;">
+              <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 23px;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;">
+                <a target="_blank" href="https://www.cmsathleticzone.com/page/show/814979-community-house-middle-school" style="color: #AB1E24;text-decoration: none;">
+                  <img class="round-button" src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/athletics-icon-1_orig.png" style="border: 0;max-width: 50px;padding: 3px;">
+                </a>
+              </p>
+            </td>
+            <td style="padding: 0;">
+              <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 23px;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;">
+                <a target="_blank" href="https://communityhousepto.weebly.com/" style="color: #AB1E24;text-decoration: none;">
+                  <img class="round-button" src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/info-icon-1_orig.png" style="border: 0;max-width: 50px;padding: 3px;">
+                </a>
+              </p>
+            </td>
+            <td style="padding: 0;">
+              <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 23px;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;">
+                <a target="_blank" href="https://communityhousepto.weebly.com/volunteer.html" style="color: #AB1E24;text-decoration: none;">
+                  <img class="round-button" src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/volunteer-icon_orig.png" style="border: 0;max-width: 50px;padding: 3px;">
+                </a>
+              </p>
+            </td>
+            <td style="padding: 0;">
+              <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 23px;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;">
+                <a target="_blank" href="https://www.pay4schoolstuff.com/" style="color: #AB1E24;text-decoration: none;">
+                  <img class="round-button" src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/spirit-wear-icon_orig.png" style="border: 0;max-width: 50px;padding: 3px;">
+                </a>
+              </p>
+            </td>
+            <td style="padding: 0;">
+              <p class="center" style="margin: 0 auto;display: table;text-align: center;max-width: 580px;line-height: 23px;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;">
+                <a target="_blank" href="https://www.pay4schoolstuff.com/" style="color: #AB1E24;text-decoration: none;">
+                  <img class="round-button" src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/donate-icon-1_orig.png" style="border: 0;max-width: 50px;padding: 3px;">
+                </a>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table class="main-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 610px;margin: 0 auto;background-color: #FFF;border-radius: 6px;">
+          <tr>
+            <td class="one-column" style="padding: 0;">
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="inner-td" style="padding: 5px;font-size: 16px;line-height: 20px;text-align: justify;">
+                    <p class="h3" style="margin: 0;text-align: center;font-size: 21px;font-weight: 600;margin-bottom: 6px;color: #AB1E24;">Future Problem Solving Club</p>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">After last year’s success at State Levels+, Future Problem Solving will continue at CHMS! FPS is a club where students are taught to think creatively about the future. This will be conducted every Thursday after school from 4.30 pm to 5.30 pm. Students research a topic to gather background information, become mini-experts in the topic, and are taught to predict possibilities for the future. Up to five topics are researched over the academic year and can be used as a curriculum, integrated into other content areas, or offered as an extracurricular option. It involves different topics in science and technology, business and economics, and social and political issues. Recent topics that FPS offered were nanotechnology, e-commerce, rage and bullying, global interdependence, invasive species, climate change/threat, space junk, and pandemic. This year the topics included are International Travel, Sleep Patterns, Gamification, and Living in Poverty.</p>
+                    <br>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">If you want to be a mini-scientist predicting problems and suggesting solutions to the future problems that could arise in the community or the world, please join this club. We need more creative and logical minds to make our future even brighter!</p>
+                    <br>
+                    <p class="left" style="margin: 0;text-align: left;max-width: 580px;line-height: 24px;">For further details please attend the information session on September 12 at 5 pm at CHMS in the art room. Hope to see you there!</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <table class="outer-table-2" style="background-color #c2c1c1: ;border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 22px auto;background-color: #C2C1C1;border-bottom: 3px solid #AB1E24;border-top: 3px solid #AB1E24;">
+          <tr>
+            <td class="three-column" style="padding: 10px 0 10px 0;text-align: center;font-size: 0;">
+              <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;">
+                <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                  <tr>
+                    <td class="inner-td" style="padding: 5px;">
+                      <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 20px;padding-top: 0px !important;">
+                        <tr>
+                          <td style="padding: 0;">
+                            <a target="_blank" href="https://www.remind.com/" style="color: #AB1E24;text-decoration: none;"><img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/remind_orig.png" style="border: 0;width: 100%;height: auto;max-width: 60%!important;"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text" style="padding: 0;">
+                            <p class="h3" style="margin: 0;text-align: center;font-size: 20px;font-weight: 500;margin-bottom: 6px;color: #AB1E24;margin-top: 6px;line-height: 23px;">Get Connected!</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text td-border" style="padding: 0;border-top: 1px dotted #FFFFFF;font-weight: bold;">
+                            <p class="bold" style="margin: 0;font-weight: 500;margin-top: 6px;color: #FFF;font-size: 18px;line-height: 23px;">CHMS PTO Texts from Remind</p>
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">Text: @chmspt</p>
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">To: 81010</p>
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">or <a target="_blank" href="https://www.remind.com/" style="color: #AB1E24;text-decoration: none;">Register Online</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text td-border" style="padding: 0;border-top: 1px dotted #FFFFFF;font-weight: bold;">
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">Connect Ed Notices</p>
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">If you do not receive emails or phone calls from CHMS, email <a href="mailto:kellyhoagland@cms.k12.nc.us" style="color: #AB1E24;text-decoration: none;">Kelly Hoagland</a> with your student's name and your primary contact number.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text td-border" style="padding: 0;border-top: 1px dotted #FFFFFF;font-weight: bold;">
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">Cavalier Courier</p>
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;"><a target="_blank" href="http://cmslistserv.cms.k12.nc.us/cgi-bin/wa.exe?SUBED1=DL345PARENTSFOCUS&A=1" style="color: #AB1E24;text-decoration: none;">Subscribe Here</a> to receive the bi-weekly newsletter from CHMS and the PTO.</p>
+                          </td>
+
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div> <!--- End First Column of three - Stay Connected --->
+
+              <div class="section" style="width: 100%;max-width: 300px;display: inline-block;vertical-align: top;">
+                <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                  <tr>
+                    <td class="inner-td" style="padding: 5px;">
+                      <table class="content" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;font-size: 16px;line-height: 20px;padding-top: 0px !important;">
+
+                        <tr>
+                          <td class="text" style="padding: 0;">
+                            <p class="h3" style="margin: 0;text-align: center;font-size: 20px;font-weight: 500;margin-bottom: 6px;color: #AB1E24;margin-top: 6px;line-height: 23px;">Spirit Wear</p>
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">
+                              PE & Spirit Wear are available on <a target="_blank" href="https://www.pay4schoolstuff.com/" style="color: #AB1E24;text-decoration: none;">pay4schoolstuff.com</a>.
+                            </p>
+                            <p style="margin: 0;margin-top: 6px;color: #FFF;font-size: 18px;font-weight: 500;line-height: 23px;">
+                              When school starts, PE uniforms and Spirit Wear will also be available at the school store.  The school store is open Monday, Wednesday, and Friday 8:45-9:15.
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0;">
+                            <br>
+                            <a target="_blank" href="https://www.pay4schoolstuff.com/" style="color: #AB1E24;text-decoration: none;"><img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/chms-shirt_orig.png" style="border: 0;width: 100%;height: auto;max-width: 60%!important;"></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div><!--- End Third Column of three - Spirit Wear --->
+            </td> <!--- End of three column section --->
+          </tr>
+        </table> <!--- End Outer Table Two (Connect/ Pay4schoolstuff/Spirit wear) -->
+
+        <table class="outer-table" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 0 auto;background-color: #FFF;">
+          <tr>
+            <td class="image" style="padding: 0;">
+              <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/backtoschool_orig.png" style="border: 0;width: 100%;max-width: 670px;height: auto;">
+            </td>
+          </tr>
+        </table> <!--- End Banner Image -->
+        <table class="outer-table-3" style="border-spacing: 0;font-family: sans-serif;color: #727f80;width: 100%;max-width: 670px;margin: 22px auto;background-color: #C2C1C1;border-top: 3px solid #AB1E24;">
+          <tr>
+            <td class="one-column" style="padding: 0;">
+              <table width="100%" style="border-spacing: 0;font-family: sans-serif;color: #727f80;">
+                <tr>
+                  <td class="footer" style="padding: 0;width: 100%;background-color: #C2C1C1;margin: 0 auto;color: #FFF;">
+                    <p class="h3-footer" style="margin: 0;font-size: 16px;text-align: center;padding: 5px;color: #FFF!important;">Courier Submissions</p>
+                    <p class="footer" style="margin: 0 auto;width: 100%;background-color: #C2C1C1;color: #FFF!important;text-align: center;// line-height: 30px;line-height: 20px;padding-bottom: 2%;">
+                      If you would like to contribute timely, pertinent information to the Courier, please email <a href="mailto:commhousepto@gmail.com" style="color: #AB1E24;text-decoration: none;">CHMS PTO</a>. All submissions are due by 12:00PM Thursday in order to appear in the Courier for Sunday.
+                      <br>
+                      <br>
+                      <a target="_blank" href="http://cmslistserv.cms.k12.nc.us/scripts/wa-CMSK12.exe?SUBED1=DL345PARENTSFOCUS&A=1" style="color: #AB1E24;text-decoration: none;">UNSUBSCRIBE</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table> <!--- End of Outer Table 3 Footer -->
+
+      </div> <!--- End Wrapper-Inner -->
+    </div>  <!--- End Wrapper-Outer -->
+  </body>
+</html><html>
+</html>

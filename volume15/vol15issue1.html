@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      body {
+      	Margin: 0!important;
+      	padding: 15px;
+      	background-color: #FFF;
+      }
+      .wrapper {
+      	width: 100%;
+      	table-layout: fixed;
+      }
+      .wrapper-inner {
+      	width: 100%;
+      	background-color: #eee;
+      	max-width: 670px;
+      	Margin: 0 auto;
+      }
+      table {
+      	border-spacing: 0;
+      	font-family: sans-serif;
+      	color: #727f80;
+      }
+      .outer-table {
+      	width: 100%;
+      	max-width: 670px;
+      	margin: 0 auto;
+      	background-color: #FFF;
+      }
+      td {
+          padding: 0;
+      }
+      .header {
+          background-color: #C2C1C1;
+          border-bottom: 3px solid #AB1E24;
+      }
+      p {
+          Margin:0;
+      }
+      .header p {
+          text-align: center;
+          padding: 1%;
+          font-weight: 500;
+          font-size: 11px;
+          text-transform: uppercase;
+      }
+      a {
+          color: #AB1E24;
+          text-decoration: none;
+      }
+      /*--- End Outer Table 1 --*/
+      .main-table-first {
+      	width: 100%;
+      	max-width: 610px;
+      	Margin: 0 auto;
+      	background-color: #FFF;
+      	border-radius: 6px;
+      	margin-top: 25px;
+      }
+      /*--- Start Two Column Sections --*/
+      .two-column {
+          text-align: center;
+          font-size: 0;
+          padding: 5px 0 10px 0;
+      }
+      .two-column .section {
+          width: 100%;
+          max-width: 300px;
+          display: inline-block;
+          vertical-align: top;
+      }
+      .two-column .content {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: justify;
+      }
+      .content {
+          width: 100%;
+          padding-top: 20px;
+      }
+      .center {
+          display: table;
+          Margin: 0 auto;
+      }
+      img {
+          border: 0;
+      }
+      {/* img.logo {
+          float: left;
+          Margin-left: 5%;
+          max-width: 200px!important;
+      }
+      #callout {
+          float: right;
+          Margin: 4% 5% 2% 0;
+          height: auto;
+          overflow: hidden;
+      }
+      #callout img {
+          max-width: 20px;
+      }
+      .social {
+          list-style-type: none;
+          Margin-top: 1%;
+          padding: 0;
+      }
+      .social li {
+          display: inline-block;
+      }
+      .social li img {
+          max-width: 15px;
+          Margin-bottom: 0;
+          padding-bottom: 0;
+      } */}
+      /*--- Start Outer Table Banner Image, Text --*/
+      .image img {
+          width: 100%;
+          max-width: 670px;
+          height: auto;
+      }
+      .main-table {
+          width: 100%;
+          max-width: 610px;
+          margin: 0 auto;
+          background-color: #FFF;
+          border-radius: 6px;
+      }
+      .one-column .inner-td {
+          font-size: 16px;
+          line-height: 20px;
+          text-align: justify;
+      }
+      .inner-td {
+          padding: 10px;
+      }
+      .inner-td-info {
+        padding: 2px;
+        line-height: 15px;
+      }
+      .h2 {
+          text-align: center;
+          font-size: 23px;
+          font-weight: 600;
+          line-height: 45px;
+          Margin: 12px;
+          color: #AB1E24;
+      }
+      p.center {
+          text-align: center;
+          max-width: 580px;
+          line-height: 24px;
+      }
+
+      /*--- Start Two Column Image & Text Sections --*/
+      .two-column img {
+          width: 100%;
+          max-width: 280px;
+          height: auto;
+      }
+      .two-column .text {
+          padding: 10px 0;
+      }
+      /*--- Start 3 Column Image & Text Section --*/
+      .outer-table-2 {
+      	width: 100%;
+      	max-width: 670px;
+      	margin: 22px auto;
+      	background-color: #C2C1C1;
+          border-bottom: 3px solid #AB1E24;
+          border-top: 3px solid #AB1E24;
+      }
+      .outer-table-2-info {
+      	width: 100%;
+      	max-width: 670px;
+      	// margin: 22px auto;
+      	background-color: #C2C1C1;
+          border-bottom: 3px solid #AB1E24;
+          border-top: 3px solid #AB1E24;
+      }
+      .three-column {
+          text-align: center;
+          font-size: 0;
+          padding: 10px 0 10px 0;
+      }
+      .three-column .section {
+          width: 100%;
+          max-width: 300px;
+          display: inline-block;
+          vertical-align: top;
+      }
+      .three-column .content {
+          font-size: 16px;
+          line-height: 20px;
+      }
+      .three-column img {
+          width: 100%;
+          max-width: 125px;
+          height: auto;
+      }
+      .three-column-info {
+          text-align: center;
+          font-size: 0;
+          padding: 0;
+      }
+      .three-column-info .section {
+          width: 100%;
+          max-width: 200px;
+          display: inline-block;
+          vertical-align: top;
+      }
+      .three-column-info .content {
+          font-size: 16px;
+          // line-height: 20px;
+          line-height: 18px;
+          padding: 0;
+      }
+      .outer-table-2 p {
+      	margin-top: 6px;
+      	color: #FFF;
+      	font-size: 18px;
+      	font-weight: 500;
+      	line-height: 23px;
+      }
+      /*--- Start Two Column Article Section --*/
+      .outer-table-3 {
+          width: 100%;
+          max-width: 670px;
+          margin: 22px auto;
+          background-color: #C2C1C1;
+          border-top: 3px solid #AB1E24;
+      }
+      .h3 {
+      	text-align: center;
+      	font-size: 21px;
+      	font-weight: 600;
+      	Margin-bottom: 8px;
+      	color: #AB1E24;
+      }
+      /*--- Start Bottom One Column Section --*/
+      .inner-bottom {
+      	padding: 22px;
+      }
+      .h1 {
+          text-align: center!important;
+          font-size: 25px!important;
+          font-weight: 600;
+          line-height: 45px;
+          Margin: 12px 0 20px 0;
+          color: #AB1E24;
+      }
+      .inner-bottom p {
+      	font-size: 16px;
+      	line-height: 24px;
+      	text-align: justify;
+      }
+      /*--- Start Footer Section --*/
+      .footer {
+      	width: 100%;
+      	background-color: #C2C1C1;
+      	Margin: 0 auto;
+          color: #FFF;
+      }
+      {/* .footer  img {
+      	max-width: 135px;
+      	Margin: 0 auto;
+      	display: block;
+      	padding: 4% 0 1% 0;
+      } */}
+      .h3-footer {
+        font-size: 16px;
+        text-align: center;
+        color: #FFF!important;
+        padding: 5px;
+      }
+      p.footer {
+      	text-align: center;
+      	color: #FFF!important;
+      	// line-height: 30px;
+        line-height: 20px;
+      	padding-bottom: 2%;
+          // text-transform: uppercase;
+      }
+      .three-column .h3 {
+        color: #AB1E24;
+        font-size: 20px;
+      }
+      .img-btn {
+        border: 3px solid #AB1E24;
+        max-height: 75px;
+      }
+      .calendar {
+        border: 3px #CDA44A solid;
+        text-align: left;
+      }
+      .calendar td {
+        padding: 5px;
+      }
+      {/* .calendar tr:nth-child(even){
+        background-color: #f2e1bb
+      } */}
+
+      /*--- Media Queries --*/
+      @media screen and (max-width: 400px) {
+      	.h1 {
+      		font-size: 22px;
+      	}
+      	.two-column .column, .three-column .column {
+      		max-width: 100%!important;
+      	}
+      	.two-column img {
+      		width: 100%!important;
+      	}
+      	.three-column img {
+      		max-width: 60%!important;
+      	}
+      }
+      @media screen and (min-width: 401px) and (max-width: 400px) {
+
+      	.two-column .column {
+      		max-width: 50%!important;
+      	}
+      	.three-column .column {
+      		max-width: 33%!important;
+      }
+      }
+      @media screen and (max-width:768px) {
+      img.logo {
+      	float:none !important;
+      	margin-left:0% !important;
+      	max-width: 200px!important;
+      }
+      //
+      // #callout {
+      // 	float:none !important;
+      // 	margin: 0% 0% 0% 0;
+      // 	height: auto;
+      // 	text-align:center;
+      // 	overflow: hidden;
+      // }
+      // #callout img {
+      //     max-width:26px !important;
+      // }
+      .two-column .section {
+      	width: 100% !important;
+      	max-width: 100% !important;
+      	display: inline-block;
+      	vertical-align: top;
+      }
+
+      .two-column img {
+      	width: 100% !important;
+       	height: auto !important;
+      }
+      img.img-responsive {
+          width:100% !important;
+          height:auto !important;
+          max-width:100% !important;
+      }
+      .content {
+      	width: 100%;
+      	padding-top:0px !important;
+      }
+      }
+      </style>
+  </head>
+  <body>
+    <div class="wrapper">
+    	<div class="wrapper-inner">
+        <table class="outer-table">
+    			<tr>
+    				<td class="header">
+    					<p><a href="https://communityhousepto.weebly.com/august-18-2019.html">Click to view this email in your browser</a></p>
+    				</td>
+          </tr>
+        </table> <!--- End Outer Table -->
+        <table class="outer-table">
+    			<tr>
+    				<td class="image">
+    					<img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/banner_orig.jpg" />
+    				</td>
+          </tr>
+        </table> <!--- End Banner Image -->
+        <table class="outer-table-2-info" style="background-color: #C2C1C1;">
+    			<tr>
+    				<td class="three-column-info">
+    					<div class="section">
+    						<table width="100%">
+    							<tr>
+    								<td class="inner-td-info">
+    									<table class="content">
+    										<tr>
+    											<td class="text">
+    												<p>August 18, 2019</p>
+    											</td>
+    										</tr>
+    									</table>
+    								</td>
+    							</tr>
+    						</table>
+    					</div> <!--- End First Column of Three Columns -->
+    					<div class="section">
+    						<table width="100%">
+    							<tr>
+    								<td class="inner-td-info">
+    									<table class="content">
+    										<tr>
+    											<td class="text">
+    												<p>Vol. 15, Issue 1</p>
+    											</td>
+    										</tr>
+    									</table>
+    								</td>
+    							</tr>
+    						</table>
+    					</div> <!--- End Second Column of Three Columns -->
+    					<div class="section">
+    						<table width="100%">
+    							<tr>
+    								<td class="inner-td-info">
+    									<table class="content">
+    										<tr>
+    											<td class="text">
+    												<p><a href="https://communityhousemiddleschool.wearecms.com">CHMS Website</a></p>
+    											</td>
+    										</tr>
+    									</table>
+    								</td>
+    							</tr>
+    						</table>
+    					</div> <!--- End Third Column of Three Columns -->
+    				</td>
+    			</tr> <!--- End Three Column Section -->
+            </table> <!--- End Outer Table 2 -->
+        <table class="main-table">
+          <tr>
+            <td class="one-column">
+              <table width="100%">
+                <tr>
+                  <td class="inner-td">
+                    <p class="h2">Message from the Principal</p>
+                    <p class="left">Dear families,</p>
+                    <br>
+                    <p class="left">Welcome back to the 2019 – 2020 school year!  I am very excited to begin my 12th year as the principal of our amazing school.  I hope everyone had a restful summer but that you are ready to send your kids back to us.  Open Houses will be next Friday, August 23rd from 8:30am – 4:30pm.  The back to school letter contained specific times for 6th grade teams and drop-in hours for upperclassmen.  Please adhere to your times as our parking lot has limited space.  Our current enrollment as of today is 1956!!  Don’t worry…we will take great care of each and every one of your children.</p>
+                    <br>
+                    <p class="left">For the first day of school on August 26th your child will only need to bring paper and writing utensils.  Teachers will let you know about additional supplies so that you do not purchase unnecessary items.  Pay4schoolstuff.com has links for parents to purchase PE wear, school agendas (required fees) and donate to the Capital Campaign (our only fundraiser).  This information is also in the back to school letter which was mailed this week.  If you did not receive a mailer, please contact the school at 980-343-0689 or email me (jamie.brooks@cms.k12.nc.us) and we can get you what you need.</p>
+                    <br >
+                    <p class="left">I look forward to a wonderful year and cannot wait to see everyone next Friday for Open House!!</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr> <!--- End Heading, Paragraph Section(message) -->
+          <tr>
+            <td class="two-column">
+                <div class="section">
+                    <table width="100%">
+                        <tr>
+                            <td class="inner-td">
+                                <table class="content">
+                                    <tr>
+                                        <td>
+                                          <table class="calendar">
+                                            <tr>
+                                              <td>
+
+                                              </td>
+                                              <td>
+                                                <p class="h3">August</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <p>23</p>
+                                              </td>
+                                              <td>
+                                                <p>Open House</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <p>26</p>
+                                              </td>
+                                              <td>
+                                                <p>First Day of School</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+
+                                              </td>
+                                              <td>
+                                                <p class="h3">September</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <p>2</p>
+                                              </td>
+                                              <td>
+                                                <p>Labor Day - No School</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <p>6</p>
+                                              </td>
+                                              <td>
+                                                <p>6th Grade Welcome Dance</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <p>12</p>
+                                              </td>
+                                              <td>
+                                                <p>Principal Chat 6:00PM</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <p>13</p>
+                                              </td>
+                                              <td>
+                                                <p>Principal Chat/PTO Meeting 9:30AM</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <p>17</p>
+                                              </td>
+                                              <td>
+                                                <p>6th Grade Curriculum Night 6:00PM</p>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <p>19</p>
+                                              </td>
+                                              <td>
+                                                <p>7th/8th Grade Curriculum Night 6:00PM</p>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div> <!--- End First Column of Two Columns calender -->
+                <div class="section">
+                  <table width="100%">
+                      <tr>
+                          <td class="inner-td">
+                              <table class="content">
+                                <tr>
+                                  <td class="text">
+                                    <p class="h2">Required Fees</p>
+                                    <p>
+                                      Pay for your Required Fees, Agendas, Spirit Wear, and join the CHMS PTO at <a href="https://www.pay4schoolstuff.com/">Pay4schoolstuff</a>.
+                                    </p>
+                                    <br/>
+                                    <p>
+                                      Returning Parents will need to update student's grade and homeroom teacher. New parents will need to update their school.
+                                    </p>
+                                    <br />
+                                    <p>
+                                      Deadline for Required Fees: September 6, 2019
+                                    </p>
+                                  </td>
+                                </tr>
+                              </table>
+                          </td>
+                      </tr>
+                    </table>
+                  </div>  <!-- End Second of Two Columns links-->
+                </td>
+              </tr>  <!-- End Two Column Section -->
+        </table> <!--- End Main Table (message) -->
+        <table class="outer-table-2" style="background-color #c2c1c1;">
+          <tr>
+            <td class="three-column">
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="inner-td">
+                      <table class="content">
+
+                        <tr>
+                          <td class="text">
+                            <p class="h3">Get Connected!</p>
+                            <p>Text: @chmspt</p>
+                            <p>To: 81010</p>
+                            <p>or <a href="https://www.remind.com/">Register Online</a></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <p>Connect Ed Notices - If you do not receive emails or phone calls from CHMS, email <a href="mailto:kelly.hoagland@cms.k12.nc.us">Kelly Hoagland</a> with your student's name and your primary contact number.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <p>The Courier - <a href="http://cmslistserv.cms.k12.nc.us/cgi-bin/wa.exe?SUBED1=DL345PARENTSFOCUS&A=1">Subscribe Here</a></p>
+                          </td>
+                        </tr><tr>
+                          <td>
+                            <a href="https://www.remind.com/"><img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/remind_orig.png" /></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div> <!--- End First Column of three - Stay Connected --->
+
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="inner-td">
+                      <table class="content">
+                        <tr>
+                          <td>
+                            <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/chms-shirt_orig.png" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <p class="h3">Spirit Wear</p>
+                            <p>
+                              PE & Spirit Wear will be abailable to purchase at Open House.
+                              It is also available at <a href="https://www.pay4schoolstuff.com/">www.pay4schoolstuff.com</a>.
+                            </p>
+                            <p>When school starts, PE uniforms and Spirit Wear will be available at the school store.  The school store is open Monday, Wednesday, and Friday 8:45-9:15.</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div><!--- End Third Column of three - Spirit Wear --->
+            </td> <!--- End of three column section --->
+          </tr>
+        </table> <!--- End Outer Table Two (Connect/ Pay4schoolstuff/Spirit wear) -->
+        <table class="main-table">
+          <tr>
+            <td class="two-column">
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="inner-td">
+                      <table class="content">
+                        <tr>
+                          <td>
+                            <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/volunteer_orig.jpg" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <p>
+                              View volunteer opportunities on the <a href="https://communityhousepto.weebly.com/volunteer.html">CHMS PTO Website.</a>. All are welcome and appreciated.
+                            </p>
+                            <p>
+                              All volunteers must register with CMS. Visit the <a href="https://www.cmsvolunteers.com/volunteer.php?newflag=1">CMS Website</a> to register.
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text">
+                            <p class="h3">Helpful Links</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="https://www.harristeeter.com/user/login"><img class="img-btn" src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/vic2_orig.png" /></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="https://smile.amazon.com/ap/signin?_encoding=UTF8&openid.assoc_handle=amzn_smile&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fsmile.amazon.com%2Fgp%2Fcharity%2Fhomepage.html%3Fie%3DUTF8%26newts%3D1%26orig%3DLw%253D%253D"><img class="img-btn" src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/amazonsmile2_orig.png"  /></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <a href="https://www.pay4schoolstuff.com/"><img class="img-btn" src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/p4ss_orig.jpg"  /></a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div> <!--- End Column one of Two Columns --->
+              <div class="section">
+                <table width="100%">
+                  <tr>
+                    <td class="inner-td">
+                      <table class="content">
+                        <tr>
+                          <td class="text">
+                            <p class="h3">Required Books</p>
+                            <p>
+                              7th and 8th Graders can purchase Springboard books at Open House.
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/springboard_orig.png" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </div> <!--- End Column two of Two Columns --->
+            </td>
+          </tr>
+        </table> <!--- Main Table (volunteer and Springboard) -->
+        <table class="outer-table">
+          <tr>
+            <td class="image">
+              <img src="https://communityhousepto.weebly.com/uploads/5/6/9/2/56925127/backtoschool_orig.png" />
+            </td>
+          </tr>
+        </table> <!--- End Banner Image -->
+        <table class="outer-table-3">
+          <tr>
+            <td class="one-column">
+              <table width="100%">
+                <tr>
+                  <td class="footer">
+                    <p class="h3-footer">Courier Submissions</p>
+                    <p class="footer">
+                      If you would like to contribute timely, pertinent information to the Courier, please email <a href="mailto:commhousepto@gmail.com">CHMS PTO</a>. All submissions are dy by 12:00PM Thursday in order to appear in the Courier for Sunday.
+                      <br />
+                      <br />
+                      <a href="http://cmslistserv.cms.k12.nc.us/scripts/wa-CMSK12.exe?SUBED1=DL345PARENTSFOCUS&A=1">UNSUBSCRIBE</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table> <!--- End of Outer Table 3 Footer -->
+
+      </div> <!--- End Wrapper-Inner -->
+    </div>  <!--- End Wrapper-Outer -->
+  </body>
+<html>
